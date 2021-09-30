@@ -31,6 +31,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'shopping-cart-outline',
     link: '/pages/order',
   },
+  {
+    title: 'News',
+    icon: 'radio-outline',
+    link: '/pages/news',
+  }
 
   
   

@@ -66,6 +66,7 @@
   "sidebar.foods": "Món ăn",
   "sidebar.category": "Danh mục món ăn",
   "sidebar.order": "Đơn đặt hàng",
+  "sidebar.news": "Tin tức",
   "title.placeholder.uploadFile": "Tải tệp lên",
 
 
@@ -111,7 +112,9 @@
 
   "title.order.listOrders": "Danh sách đơn hàng",
 
-
+  "title.news.listNews": "Danh sách tin tức",
+  "title.news.addNew": "Thêm mới một bài viêt",
+  "title.news.add": "Thêm bài viết",
   
 
   "title.options.ice.list": "Danh sách chọn nước đá",

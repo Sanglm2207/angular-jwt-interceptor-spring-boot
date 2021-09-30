@@ -65,6 +65,7 @@
   "sidebar.foods": "Foods",
   "sidebar.category": "Food Type",
   "sidebar.order": "Order",
+  "sidebar.news": "News",
 
   "title.placeholder.uploadFile": "Upload file",
 
@@ -106,7 +107,9 @@
 
   "title.order.listOrders": "List orders",
 
-
+  "title.news.listNews": "List News",
+  "title.news.addNew": "Add new News",
+  "title.news.add": "Add News",
 
   "title.options.ice.list": "Options Ice",
   "title.options.ice.add": "Add new Option Ice",

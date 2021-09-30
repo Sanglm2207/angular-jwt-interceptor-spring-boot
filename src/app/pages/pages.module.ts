@@ -48,6 +48,10 @@ const routes: Routes = [{
       loadChildren: () => import('./order/order.module').then(m => m.OrderModule),
     },
     {
+      path: 'news',
+      loadChildren: () => import('./news/news.module').then(m => m.NewsModule)
+    },
+    {
       path: '',
       redirectTo: 'dashboard',
       pathMatch: 'full',
