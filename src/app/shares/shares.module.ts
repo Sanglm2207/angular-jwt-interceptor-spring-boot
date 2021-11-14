@@ -24,7 +24,7 @@ const modules = [
   NgxEchartsModule,
   TrendModule,
   MaterialModule,
-  PrimengModule,
+  PrimengModule
 ];
 
 @NgModule({

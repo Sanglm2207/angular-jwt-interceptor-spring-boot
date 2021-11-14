@@ -1,0 +1,63 @@
+<p-toast></p-toast>
+
+<kt-portlet>
+    <kt-portlet-header [icon]="'pi pi-align-justify'" [class]="'d-flex flex-row'"
+        [title]="'title.news.listNews' | translate">
+    </kt-portlet-header>
+    <kt-portlet-body>
+        <div class="card">
+            <p-toolbar styleClass="p-mb-4">
+                <ng-template pTemplate="left">
+                    <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success p-mr-2"
+                        (click)="processSave($event)"></button>
+                </ng-template>
+
+                <ng-template pTemplate="right">
+                    <p-fileUpload mode="basic" accept="image/*" [maxFileSize]="1000000" label="Import"
+                        chooseLabel="Import" class="p-mr-2 p-d-inline-block"></p-fileUpload>
+                    <button pButton pRipple label="Export"  icon="pi pi-upload"
+                        class="p-button-help"></button>
+                </ng-template>
+            </p-toolbar>
+
+            <p-table #dt [value]="news" [rows]="10" [paginator]="true" [(selection)]="selectedNews" [rowHover]="true"
+                dataKey="id" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                [showCurrentPageReport]="true">
+
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th pSortableColumn="title">Title <p-sortIcon field="title"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="body">Body <p-sortIcon field="body"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="userId">Author <p-sortIcon field="userId"></p-sortIcon>
+                        </th>
+                        <th></th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-news1>
+                    <tr>
+                        <td>{{news1.title}}</td>
+                        <td>{{news1.body}}</td>
+                        <td>{{ news1.userId.username}}
+                     
+                        <td>
+                            <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success p-mr-2"
+                               ></button>
+                            <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning"
+                               ></button>
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="summary">
+                    <div class="p-d-flex p-ai-center p-jc-between">
+                        In total there are {{news1 ? news1.length : 0 }} foods.
+                    </div>
+                </ng-template>
+            </p-table>
+        </div>
+
+        <p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog>
+
+    </kt-portlet-body>
+</kt-portlet>
